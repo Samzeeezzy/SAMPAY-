@@ -1,26 +1,37 @@
-# SAMPAY
+# SAMPAY — Next.js Storefront
 
-Luxury general e-commerce storefront starter for Nigeria.
+Luxury general e-commerce storefront for Nigeria, built with Next.js App Router, TypeScript, Tailwind CSS, Framer Motion and Lucide React.
 
-## Included in this first storefront
-- Responsive luxury storefront and product catalogue
-- Category filtering and live product search
-- Shopping bag with quantity controls and automatic subtotal
-- Delivery details checkout form
-- Paystack Inline checkout integration point (test public key placeholder)
+## Run locally
+
+```bash
+npm install
+npm run dev
+```
+
+Open http://localhost:3000.
+
+## Current build
+
+- Responsive luxury storefront and animated hero
+- Product catalogue with category filters and search
+- Shopping bag with quantity controls and subtotal
 - Newsletter interaction
+- SamKonceptz Enterprise footer credit
 
-## Preview locally
-Open `index.html` in a browser, or serve the repository with any static web server.
+## Next production phases
 
-## Paystack production checklist
-The browser callback is not proof of payment. Before accepting real orders:
-1. Add a backend endpoint to initialize transactions using your Paystack **secret key** (never expose it in browser code).
-2. Verify every transaction reference server-side with Paystack's transaction verification API.
-3. Validate amount, currency, reference, and payment status on the server before creating an order.
-4. Add a Paystack webhook endpoint and verify its signature.
-5. Store customers, products, stock, and orders in a database. Never trust prices submitted by the browser.
-6. Replace the public test key placeholder in `index.html` with your Paystack **public** test key for testing, then the live public key after approval.
+1. Connect a database for products, stock, customers and orders.
+2. Add secure customer authentication and an admin dashboard.
+3. Implement Paystack transaction initialization and verification on the server.
+4. Add verified Paystack webhooks, order confirmation and delivery management.
 
-## Not yet connected
-Authentication, persistent database, admin dashboard, order tracking, inventory management, and secure server-side Paystack verification are the next full-stack phase. The current repository build is a working static storefront foundation, not yet a production payment system.
+**Payments are not live yet.** No Paystack secret key belongs in browser code. The checkout in this starter is a UI placeholder until the secure server-side payment flow is implemented.
+
+## Deployment
+
+Deploy the repository to Vercel and connect the GitHub repository. GitHub Pages is not suitable for this full-stack Next.js application.
+
+## Brand credit
+
+Developed by SamKonceptz Enterprise · +234 706 886 0965
