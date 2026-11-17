@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{--ink:#171713;--muted:#77776e;--cream:#f6f4ee;--paper:#fffefa;--gold:#b89a62;--line:#e7e3d9}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:'DM Sans',Arial,sans-serif}
+button,input{font:inherit}
+button{cursor:pointer}
+::selection{background:#b89a62;color:#171713}
+.serif{font-family:'Playfair Display',Georgia,serif}
+.container{width:min(1200px,88vw);margin-inline:auto}
+.eyebrow{font-size:10px;letter-spacing:2.4px;text-transform:uppercase;color:var(--gold);font-weight:700}
+.btn-dark{background:var(--ink);color:white;padding:15px 23px;border:1px solid var(--ink);font-size:11px;letter-spacing:1.5px;text-transform:uppercase;transition:all .25s}
+.btn-dark:hover{background:var(--gold);border-color:var(--gold);transform:translateY(-2px)}
+.btn-light{background:transparent;color:var(--ink);padding:14px 22px;border:1px solid #bdb8aa;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;transition:all .25s}
+.btn-light:hover{border-color:var(--gold);color:var(--gold)}
+.product-image{transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.product-card:hover .product-image{transform:scale(1.055)}
+.reveal{animation:rise .8s both}
+@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.float{animation:float 7s ease-in-out infinite}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
