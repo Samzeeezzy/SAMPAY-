@@ -7,7 +7,7 @@ import { Search, ShoppingBag, Menu, X, Plus, Minus, ArrowRight, Trash2, Sparkles
 type Product = { id:number; name:string; category:string; price:number; oldPrice?:number; image:string; tag?:string; description:string };
 
 const products:Product[] = [
-  {id:1,name:"The Everyday Tote",category:"Accessories",price:28500,oldPrice:35000,image:"https://images.unsplash.com/photo-159087 have",tag:"BESTSELLER",description:"A considered everyday carryall with a timeless silhouette."},
+  {id:1,name:"The Everyday Tote",category:"Accessories",price:28500,oldPrice:35000,image:"https://images.unsplash.com/photo-1590874103328-eac38a683ce7",tag:"BESTSELLER",description:"A considered everyday carryall with a timeless silhouette."},
   {id:2,name:"Sculpted Ceramic Set",category:"Home & Living",price:42000,image:"https://images.unsplash.com/photo-1578749556568-bc2c40e68b61",tag:"NEW ARRIVAL",description:"Quietly beautiful forms for slow mornings and warm evenings."},
   {id:3,name:"Minimal Timepiece",category:"Lifestyle",price:68500,oldPrice:79000,image:"https://images.unsplash.com/photo-1523275335684-37898b6baf30",description:"An understated finishing touch, made to move with you."},
   {id:4,name:"Linen Lounge Shirt",category:"Fashion",price:39500,image:"https://images.unsplash.com/photo-1598033129183-c4f50c736f10",tag:"LIMITED",description:"Relaxed tailoring in a breathable, beautifully soft finish."},
